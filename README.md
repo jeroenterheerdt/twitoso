@@ -1,5 +1,5 @@
 # Twitoso
-Get twitter followers using the API so you can easily find them on Counter.social, assuming they have the same username.
+Get twitter friends using the API so you can easily find them on Counter.social, assuming they have the same username.
 
 # Instructions
 1. Get access to the Twitter API here: https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api. Follow the instructions and collect the following info for your app: API Key and Secret, Access Token and Secret.
