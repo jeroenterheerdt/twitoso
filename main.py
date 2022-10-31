@@ -3,6 +3,12 @@ from tweepy import API
 import sys
 import io
 
+consumer_key="" #API Key
+consumer_secret="" #API Key Secret
+access_token="" #Access Token
+access_token_secret="" #Access Token secret
+outfile = "friends.csv"
+
 if __name__ == "__main__": 
     account_list = [] 
     if (len(sys.argv) > 1):
@@ -12,10 +18,7 @@ if __name__ == "__main__":
         print("No parameters supplied. Exiting.")
         sys.exit(0)
 
-    consumer_key="" #API Key
-    consumer_secret="" #API Key Secret
-    access_token="" #Access Token
-    access_token_secret="" #Access Token secret
+
 
     auth = OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
@@ -26,7 +29,7 @@ if __name__ == "__main__":
 
         # get friends
         friends = auth_api.get_friend_ids(screen_name=target)
-        outfile = "friends.csv"
+        
         with io.open(outfile, "w", encoding="utf-8") as file:
             for f in friends:
                 u = auth_api.get_user(user_id=f).screen_name
